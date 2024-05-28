@@ -1,4 +1,6 @@
 function Map() {
+  const googleApiKey = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
+
   return (
     <div className="mx-3 my-10 lg:mx-8 lg:my-10 lg:flex lg:justify-center">
       <div className="bg-soccershot-blue  text-white lg:flex lg:flex-row-reverse max-w-screen-lg">
@@ -25,7 +27,7 @@ function Map() {
         <div className="w-full">
           <iframe
             className="w-full h-64 lg:h-96"
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCN9bC1eMwB1oh_fOSYZmnQUC49TLjvcTo&q=Philadelphia,PA"
+            src={`https://www.google.com/maps/embed/v1/place?key=${googleApiKey}&q=Philadelphia,PA`}
             allowFullScreen
             loading="lazy"
           ></iframe>
